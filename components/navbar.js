@@ -6,7 +6,7 @@ function navbar() {
       <div className="nav">
         <input type="checkbox" id="nav-check" />
         <div className="logoHeader">
-          <a href="index.html"><img src={require("../images/profile.png")} alt="banner" /></a>
+          <a href="index.html"><img src={require("../images/main/profile.png")} alt="banner" /></a>
         </div>
         <div className="nav-btn">
           <label htmlFor="nav-check">
@@ -36,14 +36,14 @@ function navbar() {
           }
           
           .nav > .nav-links {
-              font-size: 25px;
+              font-size: 29px;
               margin: 20px 0 0px 30%;
           }
           
           .nav > .nav-links > a {
               padding: 13px 35px 13px 35px;
               text-decoration: none;
-              color: black;
+              color: #282828;
           }
           
           .nav > .nav-links > a:hover {
