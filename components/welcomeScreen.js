@@ -1,4 +1,5 @@
 import React from 'react'
+import Confeti from '../components/confeti'
 
 function welcomeScreen() {
     return (
@@ -6,6 +7,7 @@ function welcomeScreen() {
             <div className="textContainer">
                 <div className="hello">Hello World,</div>
                 <div className="name">I am Danish Davis</div>
+                <button><Confeti /></button>
             </div>
             <div className="imageContainer">
                 <svg width="1379" height="647" viewBox="0 0 1379 647" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -191,11 +193,11 @@ function welcomeScreen() {
                                 <path id="g1" d="M736.195 370.653H715.262V400.736H736.195V370.653Z" fill="#161748" />
                             </g>
                             <g id="Group" opacity="0.8">
-                                <path id="Vector" opacity="0.8" d="M729.973 200.475H1365.15" stroke="#3F3D56" stroke-width="3" stroke-miterlimit="10" />
-                                <path id="Vector_2" opacity="0.8" d="M786.402 200.464C786.402 200.464 816.776 205.094 801.045 169.31C785.315 133.525 843.725 140.299 843.725 140.299" stroke="#3F3D56" stroke-width="3" stroke-miterlimit="10" />
-                                <path id="Vector_3" opacity="0.8" d="M988.694 200.464C988.694 200.464 1019.07 195.844 1003.34 231.629C987.607 267.413 1046.02 260.64 1046.02 260.64" stroke="#3F3D56" stroke-width="3" stroke-miterlimit="10" />
-                                <path id="Vector_4" opacity="0.8" d="M1279.96 200.464C1279.96 200.464 1249.58 195.844 1265.32 231.629C1281.06 267.413 1222.64 260.64 1222.64 260.64" stroke="#3F3D56" stroke-width="3" stroke-miterlimit="10" />
-                                <path id="Vector_5" opacity="0.8" d="M1222.64 260.629H1055.04" stroke="#3F3D56" stroke-width="3" stroke-miterlimit="10" />
+                                <path id="Vector" opacity="0.8" d="M729.973 200.475H1365.15" stroke="#3F3D56" strokeWidth="3" strokeMiterlimit="10" />
+                                <path id="Vector_2" opacity="0.8" d="M786.402 200.464C786.402 200.464 816.776 205.094 801.045 169.31C785.315 133.525 843.725 140.299 843.725 140.299" stroke="#3F3D56" strokeWidth="3" strokeMiterlimit="10" />
+                                <path id="Vector_3" opacity="0.8" d="M988.694 200.464C988.694 200.464 1019.07 195.844 1003.34 231.629C987.607 267.413 1046.02 260.64 1046.02 260.64" stroke="#3F3D56" strokeWidth="3" strokeMiterlimit="10" />
+                                <path id="Vector_4" opacity="0.8" d="M1279.96 200.464C1279.96 200.464 1249.58 195.844 1265.32 231.629C1281.06 267.413 1222.64 260.64 1222.64 260.64" stroke="#3F3D56" strokeWidth="3" strokeMiterlimit="10" />
+                                <path id="Vector_5" opacity="0.8" d="M1222.64 260.629H1055.04" stroke="#3F3D56" strokeWidth="3" strokeMiterlimit="10" />
                                 <path id="Vector_6" opacity="0.8" d="M729.973 220.839C740.216 220.839 748.519 211.721 748.519 200.475C748.519 189.228 740.216 180.111 729.973 180.111C719.731 180.111 711.428 189.228 711.428 200.475C711.428 211.721 719.731 220.839 729.973 220.839Z" fill="#6C63FF" />
                                 <path id="d1" d="M844.327 165.329C854.569 165.329 862.872 156.212 862.872 144.965C862.872 133.718 854.569 124.601 844.327 124.601C834.084 124.601 825.781 133.718 825.781 144.965C825.781 156.212 834.084 165.329 844.327 165.329Z" fill="#161748" />
                                 <path id="d3" d="M965.052 220.839C975.294 220.839 983.597 211.721 983.597 200.475C983.597 189.228 975.294 180.111 965.052 180.111C954.81 180.111 946.507 189.228 946.507 200.475C946.507 211.721 954.81 220.839 965.052 220.839Z" fill="#DAA520" />
@@ -297,6 +299,10 @@ function welcomeScreen() {
 
                 .imageContainer{
                     text-align:center;
+                }
+
+                .explosion{
+                   text-align:center;
                 }
              
              `}</style>
