@@ -36,7 +36,7 @@ function navbar() {
           }
           
           .nav > .nav-links {
-              font-size: 29px;
+              font-size: 25px;
               margin: 20px 0 0px 30%;
           }
           

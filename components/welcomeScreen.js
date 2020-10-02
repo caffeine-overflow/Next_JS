@@ -1,16 +1,48 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Confeti from '../components/confeti'
+import Typist from 'react-typist';
+import { CharacterReveal } from "react-text-reveal";
 
 function welcomeScreen() {
+
+    const [fire, setFire] = useState(false);
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+
+    useEffect(() => {
+        (async () => {
+            await delay(1000);
+            setFire(true);
+        })();
+
+    }, []);
+
     return (
         <div className="container">
             <div className="textContainer">
-                <div className="hello">Hello World,</div>
-                <div className="name">I am Danish Davis</div>
-                <button><Confeti /></button>
+                <Typist avgTypingDelay={100}>
+                    <span className="hello">Hello World,</span>
+                </Typist>
+                <div className="name">
+                    <CharacterReveal
+                        animateOpacity
+                        canPlay={fire}
+                        characterOffsetDelay={60} // ms
+                        characterWordSpacing={'.25em'}
+                        copy={[
+                            'I am Danish Davis'
+                        ]}
+                        direction={'bottom'}
+                        duration={600}
+                        ease={
+                            'cubic-bezier(0.5848375451263538,-0.003374999999999906,0.16606498194945848,1.012625)'
+                        }
+
+                    />
+                </div>
+                <button className='confeti'><Confeti /></button>
             </div>
             <div className="imageContainer">
-                <svg width="1379" height="647" viewBox="0 0 1379 647" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="1100" height="647" viewBox="0 0 1379 647" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="undraw_version_control_9bpv 1">
                         <g id="undraw_version_control_9bpv 2">
                             <g id="Group 17">
@@ -269,17 +301,17 @@ function welcomeScreen() {
                         </g>
                     </g>
                 </svg>
-                <div>ghh</div>
+                <div className="fd">ghh</div>
             </div>
             <style jsx>{`
 
                 .container{
-                        display: block;
-                    margin-top: 75px;
+                    display: block;
+                    margin-top: 50px;
                 }
                 
                 .hello{
-                    font-size:110px;
+                    font-size:90px;
                     font-weight: bold;
                     color:#161748;
                 }
@@ -294,17 +326,22 @@ function welcomeScreen() {
 
                 .textContainer{
                     text-align:center;
-                    margin-bottom: 30px;
                 }
 
                 .imageContainer{
                     text-align:center;
+                    margin-top:-60px;
                 }
 
                 .explosion{
                    text-align:center;
                 }
-             
+
+                .confeti{
+                   border:none;
+                }  
+
+
              `}</style>
         </div>
     )
