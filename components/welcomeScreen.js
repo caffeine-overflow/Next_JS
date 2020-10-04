@@ -301,7 +301,6 @@ function welcomeScreen() {
                         </g>
                     </g>
                 </svg>
-                <div className="fd">ghh</div>
             </div>
             <style jsx>{`
 

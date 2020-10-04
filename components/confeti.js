@@ -4,16 +4,16 @@ import Confetti from 'react-dom-confetti';
 const delay = ms => new Promise(res => setTimeout(res, ms));
 const config = {
     angle: 90,
-    spread: 115,
+    spread: 150,
     startVelocity: 40,
     elementCount: "200",
     dragFriction: 0.12,
-    duration: "3000",
+    duration: "8000",
     stagger: 3,
     width: "10px",
     height: "10px",
     perspective: "500px",
-    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+    colors: ["#161748", "#DAA520"]
 };
 
 class confeti extends Component {
