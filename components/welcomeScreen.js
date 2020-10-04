@@ -2,45 +2,56 @@ import React, { useState, useEffect } from 'react';
 import Confeti from '../components/confeti'
 import Typist from 'react-typist';
 import { CharacterReveal } from "react-text-reveal";
+import VisibilitySensor from "react-visibility-sensor";
 
 function welcomeScreen() {
 
     const [fire, setFire] = useState(false);
+    const [typist, setTypist] = useState(false);
+
     const delay = ms => new Promise(res => setTimeout(res, ms));
 
-    useEffect(() => {
-        (async () => {
-            await delay(1000);
-            setFire(true);
-        })();
-
-    }, []);
+    async function onChange(isVisible) {
+        if (isVisible) {
+            !typist && setTypist(true);
+            await delay(2000);
+            !fire && setFire(true);
+        }
+    }
 
     return (
         <div className="container">
-            <div className="textContainer">
-                <Typist avgTypingDelay={100}>
-                    <span className="hello">Hello World,</span>
-                </Typist>
-                <div className="name">
-                    <CharacterReveal
-                        animateOpacity
-                        canPlay={fire}
-                        characterOffsetDelay={60} // ms
-                        characterWordSpacing={'.25em'}
-                        copy={[
-                            'I am Danish Davis'
-                        ]}
-                        direction={'bottom'}
-                        duration={600}
-                        ease={
-                            'cubic-bezier(0.5848375451263538,-0.003374999999999906,0.16606498194945848,1.012625)'
-                        }
+            <VisibilitySensor onChange={onChange}>
+                <div className="textContainer">
+                    {
+                        typist &&
+                        <Typist avgTypingDelay={100}>
+                            <span className="hello">Hello World,</span>
+                        </Typist>
+                    }
 
-                    />
+                    <div className="name">
+                        <CharacterReveal
+                            animateOpacity
+                            canPlay={fire}
+                            characterOffsetDelay={60} // ms
+                            characterWordSpacing={'.25em'}
+                            copy={[
+                                'I am Danish Davis'
+                            ]}
+                            direction={'bottom'}
+                            duration={600}
+                            ease={
+                                'cubic-bezier(0.5848375451263538,-0.003374999999999906,0.16606498194945848,1.012625)'
+                            }
+                        />
+                    </div>
+                    {
+                        fire &&
+                        <button className='confeti'><Confeti fire={fire} /></button>
+                    }
                 </div>
-                <button className='confeti'><Confeti /></button>
-            </div>
+            </VisibilitySensor>
             <div className="imageContainer">
                 <svg width="1100" height="647" viewBox="0 0 1379 647" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="undraw_version_control_9bpv 1">

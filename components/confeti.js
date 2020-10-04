@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import Confetti from 'react-dom-confetti';
 
-const delay = ms => new Promise(res => setTimeout(res, ms));
 const config = {
     angle: 90,
     spread: 150,
     startVelocity: 40,
     elementCount: "200",
     dragFriction: 0.12,
-    duration: "8000",
+    duration: "4000",
     stagger: 3,
     width: "10px",
     height: "10px",
@@ -25,8 +24,7 @@ class confeti extends Component {
         };
     }
 
-    componentDidMount = async () => {
-        await delay(2000);
+    componentDidMount() {
         this.setState({ fire: true })
     }
 

@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from "react-dom";
 import VisibilitySensor from "react-visibility-sensor";
 import Typist from 'react-typist';
 import { CharacterReveal } from "react-text-reveal";
 import Background from "../images/main/waves.png";
 
-function PageIntro(props) {
+function PageIntro() {
 
     const [fire, setFire] = useState(false);
     const [typist, setTypist] = useState(false);
     const delay = ms => new Promise(res => setTimeout(res, ms));
 
     async function onChange(isVisible) {
-        console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
         if (isVisible) {
             !typist && setTypist(true);
             await delay(1000);
@@ -22,7 +20,7 @@ function PageIntro(props) {
 
     return (
 
-        <div className="container" style={{ backgroundImage: "url(" + Background + ")" }}>
+        <div className="container" style={{ backgroundImage: "url(" + Background + ")" }}>\
             <VisibilitySensor onChange={onChange}>
                 <div className="textContainer">
                     {
@@ -49,14 +47,15 @@ function PageIntro(props) {
                     </div>
                 </div>
             </VisibilitySensor>
+
             <style jsx>{`
                 .container{
                     height:910px;
                     color: #161748;
                 }
                 .textContainer{
-                    width:55%;
-                    padding:5% 5% 0 10%;
+                    width:40%;
+                    margin:3% 5% 0 10%;
                 }
                 .header{
                     font-size:120px;
