@@ -20,7 +20,7 @@ function PageIntro() {
 
     return (
 
-        <div className="container" style={{ backgroundImage: "url(" + Background + ")" }}>\
+        <div className="container" style={{ backgroundImage: "url(" + Background + ")" }}>
             <VisibilitySensor onChange={onChange}>
                 <div className="textContainer">
                     {
@@ -50,12 +50,13 @@ function PageIntro() {
 
             <style jsx>{`
                 .container{
+                    overflow: auto;
                     height:910px;
                     color: #161748;
                 }
                 .textContainer{
                     width:40%;
-                    margin:3% 5% 0 10%;
+                    margin:5% 5% 0 10%;
                 }
                 .header{
                     font-size:120px;
