@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import VisibilitySensor from "react-visibility-sensor";
 import Typist from 'react-typist';
 import { CharacterReveal } from "react-text-reveal";
-import Background from "../images/main/waves.png";
+import Background from "../images/main/waves.svg";
 
 function PageIntro() {
 
@@ -53,10 +53,11 @@ function PageIntro() {
                     overflow: auto;
                     height:910px;
                     color: #161748;
+                    margin-top:-100px;
                 }
                 .textContainer{
-                    width:40%;
-                    margin:5% 5% 0 10%;
+                    width:45%;
+                    margin:18% 5% 0 10%;
                 }
                 .header{
                     font-size:120px;

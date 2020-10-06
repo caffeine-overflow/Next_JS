@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/navbar'
 import WelcomeScreen from '../components/welcomeScreen'
 import PageIntro from '../components/pageIntro'
+import Skills from '../components/skills'
 
 function index() {
     return (
@@ -9,6 +10,7 @@ function index() {
             <Navbar />
             <WelcomeScreen />
             <PageIntro />
+            <Skills />
         </div>
     )
 }
