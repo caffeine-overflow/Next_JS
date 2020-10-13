@@ -7,6 +7,40 @@
   margin: 40px auto;
 }
 
+.cardImage {
+  position: relative;
+  -webkit-animation: linear;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 2s;
+}
+
+.cardImage2 {
+  position: relative;
+  -webkit-animation: linear;
+  -webkit-animation-name: run2;
+  -webkit-animation-duration: 2s;
+}
+
+@-webkit-keyframes run {
+  0% {
+    left: -20%;
+    transform: perspective(900px) rotateX(5deg) rotateY(33deg) scale(1);
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes run2 {
+  0% {
+    right: -20%;
+    transform: perspective(900px) rotateX(33deg) rotateY(5deg) scale(1);
+  }
+  100% {
+    right: 0%;
+  }
+}
+
 .Typist .Cursor {
   display: inline-block;
 }
