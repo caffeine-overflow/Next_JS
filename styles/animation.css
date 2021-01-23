@@ -300,3 +300,64 @@
     fill: #161748;
   }
 }
+
+#love4,
+#love6,
+#love8,
+#love12 {
+  animation: love 5s infinite;
+  animation-timing-function: linear;
+}
+
+#love1,
+#love5,
+#love7,
+#love9 {
+  animation: love2 5s infinite 2s;
+  animation-timing-function: linear;
+}
+
+#love2,
+#love3,
+#love10,
+#love11 {
+  animation: love3 5s infinite 4s;
+  animation-timing-function: linear;
+}
+
+@keyframes love {
+  from {
+    transform: translate(10px, 0px);
+    width: 88px;
+  }
+  65% {
+    transform: translate(50px, 45px);
+  }
+  to {
+    transform: translate(10px, 0px);
+  }
+}
+
+@keyframes love2 {
+  from {
+    transform: translate(-5px, 50px);
+  }
+  65% {
+    transform: translate(-20px, 90px);
+  }
+  to {
+    transform: translate(-5px, 50px);
+  }
+}
+
+@keyframes love3 {
+  from {
+    transform: translate(0, 20px);
+  }
+  65% {
+    transform: translate(0, 55px);
+  }
+  to {
+    transform: translate(0, 20px);
+  }
+}

@@ -7,7 +7,7 @@ const config = {
     startVelocity: 40,
     elementCount: "200",
     dragFriction: 0.12,
-    duration: "7000",
+    duration: "4000",
     stagger: 3,
     width: "10px",
     height: "10px",

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom'
+import React from 'react';
 import { useSpring, animated } from 'react-spring'
 import VisibilitySensor from "react-visibility-sensor";
-import Typist from 'react-typist';
-import { CharacterReveal } from "react-text-reveal";
+
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 80, 1.1]
 const trans = (x, y, s) => `perspective(900px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
@@ -65,7 +63,6 @@ function PageIntro() {
             <style jsx>{`
                 .skills{
                     overflow: hidden;
-                    height:1500px;
                     margin: 50px auto 0 auto;
                 }
                 .skillsHeader{
