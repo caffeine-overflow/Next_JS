@@ -4,6 +4,7 @@ import Gallery from "react-photo-gallery";
 import Navbar from '../components/navbar'
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "./../components/imagegallery";
+import { motion } from "framer-motion";
 
 function index() {
 
@@ -21,31 +22,39 @@ function index() {
     };
 
     return (
-        <div>
-            <Navbar />
-            <div style={{ marginBottom: '30px' }} />
-            <Gallery photos={photos} onClick={openLightbox} />
-            <div style={{ marginBottom: '30px' }} />
-            <ModalGateway>
-                {viewerIsOpen ? (
-                    <Modal onClose={closeLightbox}>
-                        <Carousel
-                            currentIndex={currentImage}
-                            views={photos.map(x => ({
-                                ...x,
-                                srcset: x.srcSet,
-                                caption: x.title
-                            }))}
-                        />
-                    </Modal>
-                ) : null}
-            </ModalGateway>
-            <style jsx>
-                {`
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+                duration: 2
+            }}
+        >
+            <div>
+                <Navbar />
+                <div style={{ marginBottom: '30px' }} />
+                <Gallery photos={photos} onClick={openLightbox} />
+                <div style={{ marginBottom: '30px' }} />
+                <ModalGateway>
+                    {viewerIsOpen ? (
+                        <Modal onClose={closeLightbox}>
+                            <Carousel
+                                currentIndex={currentImage}
+                                views={photos.map(x => ({
+                                    ...x,
+                                    srcset: x.srcSet,
+                                    caption: x.title
+                                }))}
+                            />
+                        </Modal>
+                    ) : null}
+                </ModalGateway>
+                <style jsx>
+                    {`
 
                     `}
-            </style>
-        </div>
+                </style>
+            </div>
+        </motion.div>
     )
 }
 

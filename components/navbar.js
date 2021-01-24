@@ -1,9 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
+import Router from 'next/router'
+import NProgress from 'nprogress'
+
+Router.onRouteChangeStart = () => NProgress.start();
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 function navbar() {
   return (
     <div>
+      <Head>
+        <title>Dans</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" integrity="sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==" crossOrigin="anonymous" />
+      </Head>
       <div className="nav">
         <input type="checkbox" id="nav-check" />
         <div className="logoHeader">
@@ -47,7 +58,7 @@ function navbar() {
             <a>my 'builds'</a>
           </Link>
           <Link href="/photography">
-            <a target="_blank">photography</a>
+            <a>photography</a>
           </Link>
         </div>
       </div>
