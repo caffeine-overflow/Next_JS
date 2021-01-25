@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring'
 import VisibilitySensor from "react-visibility-sensor";
+import { motion } from "framer-motion";
 
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 80, 1.1]
@@ -10,22 +11,14 @@ function PageIntro() {
     const [first, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
     const [second, setSecond] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 
+    const [fire, setFire] = useState(false);
+    const [fire2, setFire2] = useState(false);
+
     function onChange(isVisible) {
         if (isVisible) {
-            document.getElementById('skillsImage1').className = "card cardImage";
+            !fire && setFire(true);
         }
-        else {
-            document.getElementById('skillsImage1').className = "card";
-        }
-    }
-
-    function onChange2(isVisible) {
-        if (isVisible) {
-            document.getElementById('skillsImage2').className = "card cardImage2";
-        }
-        else {
-            document.getElementById('skillsImage2').className = "card";
-        }
+        console.log(fire);
     }
 
     return (
@@ -33,29 +26,30 @@ function PageIntro() {
             <div style={{ width: '90%', margin: 'auto' }}>
                 <div className="skillsHeader">What I'm familiar with?</div>
                 <div className="skillsContainer">
-                    <VisibilitySensor onChange={onChange} partialVisibility={true}>
-                        <div>
-                            <animated.div
-                                id="skillsImage1"
-                                className="card"
-                                onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-                                onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                                style={{ transform: first.xys.interpolate(trans) }}
-                            >
-                                <img style={{ width: '100%' }} src={require("../images/main/skills.png")} alt="skills1" />
-                            </animated.div>
+                    <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={300}>
+                        <div style={{ height: '500px' }}>
+                            {
+                                fire &&
+                                <motion.div
+                                    initial={{ x: 500, rotate: -10 }}
+                                    animate={{ x: 0, rotate: 0 }}
+                                    transition={{
+                                        type: 'spring',
+                                        stiffness: 120,
+                                    }}
+                                >
+                                    <animated.div
+                                        id="skillsImage1"
+                                        className="card"
+                                        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+                                        onMouseLeave={() => set({ xys: [0, 0, 1] })}
+                                        style={{ transform: first.xys.interpolate(trans) }}
+                                    >
+                                        <img style={{ width: '100%' }} src={require("../images/main/skills.png")} alt="skills1" />
+                                    </animated.div>
+                                </motion.div>
+                            }
                         </div>
-                    </VisibilitySensor>
-                    <VisibilitySensor onChange={onChange2} partialVisibility={true}>
-                        <animated.div
-                            id="skillsImage2"
-                            className="card"
-                            onMouseMove={({ clientX: x, clientY: y }) => setSecond({ xys: calc(x, y) })}
-                            onMouseLeave={() => setSecond({ xys: [0, 0, 1] })}
-                            style={{ transform: second.xys.interpolate(trans) }}
-                        >
-                            <img style={{ width: '100%' }} src={require("../images/main/skills2.png")} alt="skills1" />
-                        </animated.div>
                     </VisibilitySensor>
                 </div>
             </div>
