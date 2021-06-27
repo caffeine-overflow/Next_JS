@@ -11,8 +11,8 @@ function index() {
             <Navbar />
             <WelcomeScreen />
             <PageIntro />
-            <Quote />
             <Skills />
+            <Quote />
         </div>
     )
 }

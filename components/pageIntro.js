@@ -17,7 +17,6 @@ function PageIntro() {
     }
 
     return (
-
         <div className="container" style={{ backgroundImage: "url(" + Background + ")" }}>
             <VisibilitySensor onChange={onChange}>
                 <div className="textContainer">
@@ -33,8 +32,8 @@ function PageIntro() {
                             ease={"cubic-bezier(0,0.4,0.4,1)"}
                             duration={8000}
                         >
-                            I'm a Computer programmer offering a strong foundation in software engineering and programming principles. Experience in object-oriented programming; developing, testing and debugging code; designing interfaces; and managing database systems. Bringing strong work ethic and excellent organizational skills to any setting. Excited to begin a new challenge with a successful team.
-                        </Reveal>
+                            I'm a Full Stack Developer offering a strong foundation in software engineering and programming principles across multiple platforms.
+                            Experienced in object-oriented programming; developing, testing & debugging code; designing interfaces; and managing database systems. Constant student of emerging development techniques and promising frameworks.                        </Reveal>
                     </div>
                 </div>
             </VisibilitySensor>
@@ -51,7 +50,7 @@ function PageIntro() {
                     margin:18% 5% 0 10%;
                 }
                 .header{
-                    font-size:120px;
+                    font-size:100px;
                     font-weight: bold;
                 }
                 .desc{

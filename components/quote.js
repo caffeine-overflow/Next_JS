@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Reveal } from "react-text-reveal";
 import VisibilitySensor from "react-visibility-sensor";
 export default function quote() {
@@ -11,22 +11,23 @@ export default function quote() {
     }
     return (
         <div>
-            <div className="quoteContainer">
-                <div className="textContainer">
-                    <Reveal
-                        canPlay={fire}
-                        ease={"cubic-bezier(0,0.4,0.4,1)"}
-                        duration={5000}
-                    >
-                        <h1 className="quote">
-                            Everyday life is like <span style={{ color: '#DFB54B' }}> programming</span>, I guess. If you  <span style={{ color: '#DFB54B' }}>love</span> something you can put beauty into it.
-                            <br />
-                            <span className="subHeader"> - Donald Knuth (Computer Scientist) </span>
-                        </h1>
-                    </Reveal>
-                </div>
-                <div className="svgContainer">
-                    <VisibilitySensor onChange={onChange}>
+            <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={500}>
+                <div className="quoteContainer">
+                    <div className="textContainer">
+                        <Reveal
+                            canPlay={fire}
+                            ease={"cubic-bezier(0,0.4,0.4,1)"}
+                            duration={5000}
+                        >
+                            <h1 className="quote">
+                                Everyday life is like <span style={{ color: '#DFB54B' }}> programming</span>, I guess.
+                                If you  <span style={{ color: '#DFB54B' }}>love</span> something you can put beauty into it.
+                                <br />
+                                <span className="subHeader"> - Donald Knuth (Computer Scientist) </span>
+                            </h1>
+                        </Reveal>
+                    </div>
+                    <div className="svgContainer">
                         <svg className="loveSvg" viewBox="0 0 975 732" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="undraw_inspiration_lecl (1) 1" clipPath="url(#clip0)">
                                 <path id="Vector" d="M450.434 689.714C476.918 686.259 502.382 683.323 526.825 680.904L517.422 665.14C520.69 664.23 534.841 673.355 534.841 673.355L522.89 627.765C539.224 629.599 546.818 676.097 546.818 676.097L565.341 660.61L556.217 678.152C631.014 671.618 695.555 669.604 749.808 670.108L741.76 656.615C745.028 655.705 759.179 664.83 759.179 664.83L747.228 619.241C763.561 621.074 771.156 667.573 771.156 667.573L789.678 652.086L780.015 670.665C825.483 671.931 862.532 674.942 891.112 678.222C883.087 657.253 855.027 637.083 855.027 637.083C876.608 642.718 887.832 651.883 893.639 660.376C894.794 616.962 886.857 573.785 870.336 533.621C870.336 533.621 913.846 615.695 907.279 670.39L906.444 680.106C944.337 685.078 963.35 690.024 963.35 690.024L450.434 689.714Z" fill="#3F3D56" />
@@ -65,25 +66,30 @@ export default function quote() {
                                 </clipPath>
                             </defs>
                         </svg>
-                    </VisibilitySensor>
+                    </div>
                 </div>
-            </div>
+            </VisibilitySensor>
             <style jsx>{`
                 .quoteContainer{
                    display: flex;
+                   justify-content: space-between;
                    width:80%;
                    margin:auto;
                    height:950px;
                 }
                 .textContainer{
-                    margin:auto;
-                    width: 60%;
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
                 }
                 .svgContainer{
-                    margin:auto;
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
                 }
                 .loveSvg{
-                    width:800px; 
+                    width: 90%; 
+                    max-width: 650px;
                 }
                 .quote{
                     font-size:45px;
@@ -97,6 +103,6 @@ export default function quote() {
                     font-weight:400;
                 }
             `}</style>
-        </div >
+        </div>
     )
 }

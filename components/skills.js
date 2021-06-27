@@ -1,36 +1,97 @@
 import React, { useState, useEffect } from 'react';
-import { useSpring, animated } from 'react-spring'
 import VisibilitySensor from "react-visibility-sensor";
 import { motion } from "framer-motion";
 
+const skills = [
+    {
+        'name': 'React',
+        'image': require('../images/main/react.png')
+    },
+    {
+        'name': 'Node JS',
+        'image': require('../images/main/node.png')
+    },
+    {
+        'name': 'Laravel',
+        'image': require('../images/main/laravel.png')
+    },
+    {
+        'name': 'PSQL',
+        'image': require('../images/main/psql.png')
+    },
+    {
+        'name': 'MySQL',
+        'image': require('../images/main/mysql.png')
+    },
+    {
+        'name': 'MongoDB',
+        'image': require('../images/main/mongodb.png')
+    },
+    {
+        'name': 'Next JS',
+        'image': require('../images/main/nextjs.png')
+    },
+    {
+        'name': 'Gatsby JS',
+        'image': require('../images/main/gatsby.png')
+    },
+    {
+        'name': 'HTML',
+        'image': require('../images/main/html.png')
+    },
+    {
+        'name': 'CSS',
+        'image': require('../images/main/css.png')
+    },
+    {
+        'name': 'Figma',
+        'image': require('../images/main/figma.png')
+    },
+    {
+        'name': 'Docker',
+        'image': require('../images/main/docker.png')
+    }
+];
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 80, 1.1]
-const trans = (x, y, s) => `perspective(900px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 function PageIntro() {
-    const [first, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
-    const [second, setSecond] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 
     const [fire, setFire] = useState(false);
-    const [fire2, setFire2] = useState(false);
 
     function onChange(isVisible) {
         if (isVisible) {
             !fire && setFire(true);
         }
-        console.log(fire);
     }
 
     return (
         <div className="skills">
-            <div style={{ width: '90%', margin: 'auto' }}>
-                <div className="skillsHeader">What I'm familiar with?</div>
-                <div className="skillsContainer">
-                    <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={300}>
-                        <div style={{ height: '500px' }}>
-                            {
-                                fire &&
+            <div className="skillsHeader">Area of expertise</div>
+            <div className="skillsContainer">
+                <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={300}>
+                    <div
+                        style={{
+                            height: '800px',
+                            width: '1000px',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            flexWrap: 'wrap',
+                            margin: 'auto'
+                        }}
+                    >
+                        {
+                            fire &&
+                            skills.map((s, i) =>
                                 <motion.div
+                                    key={i}
+                                    style={{
+                                        width: '200px',
+                                        height: '200px',
+                                        margin: '20px',
+                                        background: '#e6e6e6',
+                                        flexWrap: 'wrap',
+                                        borderRadius: '15px'
+                                    }}
                                     initial={{ x: 500, rotate: -10 }}
                                     animate={{ x: 0, rotate: 0 }}
                                     transition={{
@@ -38,26 +99,37 @@ function PageIntro() {
                                         stiffness: 120,
                                     }}
                                 >
-                                    <animated.div
-                                        id="skillsImage1"
-                                        className="card"
-                                        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-                                        onMouseLeave={() => set({ xys: [0, 0, 1] })}
-                                        style={{ transform: first.xys.interpolate(trans) }}
-                                    >
-                                        <img style={{ width: '100%' }} src={require("../images/main/skills.png")} alt="skills1" />
-                                    </animated.div>
+                                    <div className="skill__card">
+                                        <div
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                height: '160px'
+                                            }}
+                                        >
+                                            <img
+                                                style={{ width: '100px', display: 'block', margin: 'auto' }}
+                                                src={s.image}
+                                                alt="skills1"
+                                            />
+                                        </div>
+                                        <div style={{
+                                            textAlign: 'center', color: '#161748', fontSize: '14px'
+                                        }}>
+                                            {s.name}
+                                        </div>
+                                    </div>
                                 </motion.div>
-                            }
-                        </div>
-                    </VisibilitySensor>
-                </div>
+                            )
+                        }
+                    </div>
+                </VisibilitySensor>
             </div>
 
             <style jsx>{`
                 .skills{
                     overflow: hidden;
-                    margin: 50px auto 0 auto;
+                    margin: 80px auto 0 auto;
                 }
                 .skillsHeader{
                     font-size:75px;

@@ -3,19 +3,43 @@ import Navbar from '../components/navbar'
 import Card from '../components/card'
 
 function index() {
+    let projectArray = [
+        {
+            name: 'E-Commerce Web App',
+            desc: 'This is the description',
+            stack: ['React', 'HTML', 'CSS']
+        },
+        {
+            name: 'E-Commerce Web App',
+            desc: 'This is the description',
+            stack: ['React', 'HTML', 'CSS']
+        },
+        {
+            name: 'E-Commerce Web App',
+            desc: 'This is the description',
+            stack: ['React', 'HTML', 'CSS']
+        },
+        {
+            name: 'E-Commerce Web App',
+            desc: 'This is the description',
+            stack: ['React', 'HTML', 'CSS']
+        }
+    ];
+
     return (
         <div>
             <Navbar />
-
             <div className='container'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {
+                    projectArray.map((p, i) => {
+                        return <Card
+                            key={i}
+                            index={i}
+                            animationDirection={i % 2 == 0 ? 'right' : 'left'}
+                            info={projectArray[i]}
+                        />
+                    })
+                }
             </div>
             <style jsx>
                 {`

@@ -371,7 +371,8 @@ function index() {
                             margin-right: auto;
                             font-size: 21px;
                             color: #161748;
-                            font-family: 'Open Sans', sans-serif;
+                            font-family: 'Roboto', sans-serif;
+                            font-weight: 300;
                             line-height: 1.5;
                         }
                         .section1{

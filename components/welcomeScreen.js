@@ -26,7 +26,7 @@ function welcomeScreen() {
             <VisibilitySensor onChange={onChange}>
                 <div className="textContainer">
                     {
-                        typist && <div style={{ height: '130px' }}>
+                        typist && <div style={{ height: '100px' }}>
                             <Typist avgTypingDelay={100} >
                                 <span className="hello">Hello World,</span>
                             </Typist>
@@ -334,7 +334,7 @@ function welcomeScreen() {
                 }
                 
                 .hello{
-                    font-size:90px;
+                    font-size:70px;
                     font-weight: bold;
                     color:#161748;
                 }

@@ -13,6 +13,7 @@
 
 .Typist .Cursor--blinking {
   opacity: 1;
+  font-size: 70px;
   animation: blink 1s linear infinite;
 }
 
@@ -326,4 +327,15 @@
   to {
     transform: translate(0, 20px);
   }
+}
+
+.skill__card{
+  height: 100%;
+}
+
+.skill__card:hover{
+  background: #DFB54B;
+  background: url("../images/main/waves.svg");
+  padding: 5px;
+  cursor: pointer;
 }

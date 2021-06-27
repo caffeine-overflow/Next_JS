@@ -73,6 +73,7 @@ function navbar() {
             display:flex;
             justify-content:center;
             margin-top: 40px;
+            font-family: 'roboto'
           }
           
           .nav > .nav-links {
