@@ -1,28 +1,29 @@
 import React, { useEffect } from 'react';
-import Head from 'next/head';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faFacebook, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 function footer() {
-    useEffect(() => {
-        const script = document.createElement("script");
-        script.src = "https://use.fontawesome.com/releases/v5.0.13/js/all.js";
-        script.crossOrigin = 'anonymous';
-        script.integrity = "sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe";
-        script.async = true;
-        document.body.appendChild(script);
-    }, [])
     return (
         <div>
             <div>
                 <section className="footer">
                     <div className="rounded-social-buttons">
-                        <a className="social-button facebook" href="https://github.com/caffeine-overflow" target="_blank"><i className="fab fa-github"></i></a>
-                        <a className="social-button linkedin" href="https://www.linkedin.com/in/danishdavis/" target="_blank"><i className="fab fa-linkedin"></i></a>
-                        <a className="social-button instagram" href="https://www.instagram.com/danlovespopcorn/" target="_blank"><i className="fab fa-instagram"></i></a>
-                        <a className="social-button facebook" href="https://www.facebook.com/Popcorn1995/" target="_blank"><i className="fab fa-facebook-f"></i></a>
+                        <a className="social-button facebook" href="https://github.com/caffeine-overflow" target="_blank">
+                            <FontAwesomeIcon style={{ width: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', margin: 'auto' }} icon={faGithub} />
+                        </a>
+                        <a className="social-button linkedin" href="https://www.linkedin.com/in/danishdavis/" target="_blank">
+                            <FontAwesomeIcon style={{ width: '25px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', margin: 'auto' }} icon={faLinkedinIn} />
+                        </a>
+                        <a className="social-button instagram" href="https://www.instagram.com/danlovespopcorn/" target="_blank">
+                            <FontAwesomeIcon style={{ width: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', margin: 'auto' }} icon={faInstagram} />
+                        </a>
+                        <a className="social-button facebook" href="https://www.facebook.com/Popcorn1995/" target="_blank">
+                            <FontAwesomeIcon style={{ width: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', margin: 'auto' }} icon={faFacebook} />
+                        </a>
                     </div>
-                    <div style={{ textAlign: 'center', marginTop: '20px', fontSize: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', fontSize: '20px' }}>
                         Made with
-                        <i className="fas fa-heart" style={{ color: 'red', marginLeft: '5px' }}></i>
+                        <FontAwesomeIcon style={{ width: '25px', color: 'red', marginLeft: '10px' }} icon={faHeart} />
                     </div>
                 </section>
             </div>
