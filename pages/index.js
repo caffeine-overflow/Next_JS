@@ -5,7 +5,6 @@ import PageIntro from '../components/pageIntro'
 import Skills from '../components/skills'
 import Quote from '../components/quote'
 import Footer from '../components/footer'
-import Head from "next/head";
 
 function index() {
     return (

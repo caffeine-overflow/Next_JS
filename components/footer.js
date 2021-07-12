@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 function footer() {
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://use.fontawesome.com/releases/v5.0.13/js/all.js";
+        script.crossOrigin = 'anonymous';
+        script.integrity = "sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe";
+        script.async = true;
+        document.body.appendChild(script);
+    }, [])
     return (
         <div>
-            <Head>
-                <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-            </Head>
             <div>
                 <section className="footer">
                     <div className="rounded-social-buttons">
