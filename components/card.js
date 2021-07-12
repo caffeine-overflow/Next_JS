@@ -26,7 +26,7 @@ function Card(props) {
                         }}
                     >
                         <div className='container'>
-                            <div style={{ width: '60%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <div style={{ width: '60%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
                                 <div>
                                     <SimpleImageSlider
                                         width={600}
