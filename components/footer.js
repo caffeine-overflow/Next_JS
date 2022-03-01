@@ -17,7 +17,7 @@ function footer() {
                         <a className="social-button instagram" href="https://www.instagram.com/danlovespopcorn/" target="_blank">
                             <FontAwesomeIcon style={{ width: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', margin: 'auto' }} icon={faInstagram} />
                         </a>
-                        <a className="social-button facebook" href="https://www.facebook.com/Popcorn1995/" target="_blank">
+                        <a className="social-button facebook" href="https://www.facebook.com/danlovespopcorn/" target="_blank">
                             <FontAwesomeIcon style={{ width: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', margin: 'auto' }} icon={faFacebook} />
                         </a>
                     </div>

@@ -13,7 +13,7 @@ function Card(props) {
     }
 
     return (
-        <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={350}>
+        <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={50}>
             <div style={{ minHeight: '500px', width: '100%' }}>
                 {
                     fire &&
@@ -31,6 +31,7 @@ function Card(props) {
                                     <SimpleImageSlider
                                         width={600}
                                         height={500}
+                                        bgColor="white"
                                         images={props.info.images}
                                         showBullets={true}
                                         showNavs={true}
