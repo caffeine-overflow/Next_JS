@@ -16,7 +16,10 @@ function index() {
                 { url: require('../images/projects/ohlala3.png') },
                 { url: require('../images/projects/ohlala4.png') },
                 { url: require('../images/projects/ohlala5.png') },
-            ]
+            ],
+            git: 'https://github.com/caffeine-overflow/ecw',
+            exe: null,
+            link: 'https://ohlalaa.herokuapp.com/'
         },
         {
             name: 'Android App',
@@ -26,7 +29,10 @@ function index() {
                 { url: require('../images/projects/android1.png') },
                 { url: require('../images/projects/android2.png') },
                 { url: require('../images/projects/android3.png') },
-            ]
+            ],
+            git: 'https://github.com/caffeine-overflow/ECW-androif',
+            exe: null,
+            link: null
         },
         {
             name: 'Point of Sales - Desktop App',
@@ -36,7 +42,10 @@ function index() {
                 { url: require('../images/projects/pos1.png') },
                 { url: require('../images/projects/pos2.png') },
                 { url: require('../images/projects/pos3.png') },
-            ]
+            ],
+            git: 'https://github.com/caffeine-overflow/Java-POS',
+            exe: '/pos.zip',
+            link: null
         },
         {
             name: 'Survival Game',
@@ -46,7 +55,10 @@ function index() {
                 { url: require('../images/projects/survival1.png') },
                 { url: require('../images/projects/survival2.png') },
                 { url: require('../images/projects/survival3.png') },
-            ]
+            ],
+            git: null,
+            exe: '/survival.zip',
+            link: null
         },
         {
             name: 'Portfolio',
@@ -54,7 +66,10 @@ function index() {
             stack: ['React', 'HTML', 'CSS'],
             images: [
                 { url: require('../images/projects/portfolio.png') }
-            ]
+            ],
+            git: 'https://github.com/caffeine-overflow/Next_JS',
+            exe: null,
+            link: null
         },
         {
             name: 'Bird Game',
@@ -63,7 +78,10 @@ function index() {
             images: [
                 { url: require('../images/projects/bird1.png') },
                 { url: require('../images/projects/bird2.png') }
-            ]
+            ],
+            git: null,
+            exe: '/birdgame.zip',
+            link: null
         },
         {
             name: 'Mini Golf Game',
@@ -71,7 +89,10 @@ function index() {
             stack: ['React', 'HTML', 'CSS'],
             images: [
                 { url: require('../images/projects/golf1.png') }
-            ]
+            ],
+            git: null,
+            exe: '/golf.zip',
+            link: null
         },
         {
             name: 'RStats',
@@ -80,7 +101,10 @@ function index() {
             images: [
                 { url: require('../images/projects/rstats1.png') },
                 { url: require('../images/projects/rstats2.png') },
-            ]
+            ],
+            git: 'https://github.com/caffeine-overflow/rstats',
+            exe: '/rstats.zip',
+            link: null
         },
     ];
 

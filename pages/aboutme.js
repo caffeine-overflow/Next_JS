@@ -132,17 +132,16 @@ function index() {
                                     <h2>Who am I?</h2>
                                     <div>
                                         I am going to try to keep this short, but I tend to ramble on and on, so feel free to stop reading at any point.
-                                        My name is right on the top and I am 23 years old. I am finishing up my 3rd semester of
-                                        computer programming at Fanshawe college, it has been an intense year of drinking coffee at 2 am
-                                        and blaming the programming language when my program does not run. But, I am surviving.
+                                        My name is Danish Davis & I am 26 years old. I am a graduate of Fanshawe's three-year Computer Programming Analyst program. Those were the intense years of drinking coffee at 2 am and blaming the programming language when my program did not run. But I survived.
+                                        I also hold a Business administration diploma from Fanshawe College.
                                         <div style={{ height: '10px' }}></div>
-                                        I am an ardent supporter of the Barcelona Soccer team. So when I am not coding, you will find me watching
-                                        soccer or playing fifa.(If you can beat me on Fifa, then you already a legend). Moreover,
-                                        I am a self-proclaimed photographer and I have a passion to travel. I was travelling and working
-                                        in the west before I joined Fanshawe and it helped me to find what I really wanted to do in the future.
+                                        I am an ardent supporter of the Barcelona Soccer team.
+                                        So when I am not coding, you will find me watching soccer or playing FIFA (If you can beat me on Fifa, then you are already a legend).
+                                        Moreover, I love landscape photography even though I'm not good at it. I have a passion for traveling & exploring new things.
                                         <div style={{ height: '10px' }}></div>
                                         Between, did I forget to mention I love memes?
-                                        But hey, thanks for reading the whole paragraph just about me and nice to meet you
+                                        <br /><br />
+                                        But hey, thanks for reading the whole paragraph just about me and nice to meet you!!
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +169,7 @@ function index() {
                                                 and ATMs works, and how terribly these can go wrong if it does not function as it supposed to.
                                                 My passion and curiosity towards technology lead me towards programming. It was the right decision!! I am loving it.
                                                 Fanshawe gave me a strong foundation about the programming concepts.
-                                                I found some of the projects very intense and time-consuming, but I am enjoying these challenges.
+                                                I found some of the projects very intense and time-consuming, but I enjoyed those challenges.
                                                 I am just overwhelmed by the fact that there is so much to learn and I am totally fine with that.
                                             </div>
                                         </div>
@@ -361,12 +360,10 @@ function index() {
                                         <div>
                                             <h2>What is my goal?</h2>
                                             <div>
-                                                I believe every day is a new opportunity. My primary goal always remains the same,
-                                                keep improving myself personally and professionally. My short-term goal is to
-                                                secure a co-op position at a company where I can continue to learn about the industry
-                                                and apply the skills I already know. I am comparatively new to programming,
-                                                but I have learned a lot over the year and I am very passionate about what I am doing.
-                                                So if you are looking for someone upbeat and excited then you are in the right place.
+                                                I believe every day is a new opportunity.
+                                                My primary goal always remains the same, keep improving myself personally and professionally.
+                                                My short-term goal is to learn more about the IT industry and improve my software development skills. I am comparatively new to programming, but I have learned a lot over the years and I am very passionate about what I am doing.
+                                                So if you are looking for someone upbeat and excited then you are in the right place!!
                                             </div>
                                         </div>
                                     </div>
@@ -389,8 +386,8 @@ function index() {
                                 >
                                     <div className='container'>
                                         <div>
-                                            <h2 style={{ margin: 0 }}>Think we could change the world together?</h2>
-                                            <h4 style={{ margin: '10px 0 0 0', fontStyle: 'italic' }}>Feel free to drop me an email</h4>
+                                            <h1 style={{ margin: 0 }}>Think we could change the world together?</h1>
+                                            <h4 style={{ margin: '20px 0 0 0', fontStyle: 'italic' }}>Feel free to drop me an email</h4>
                                             <br />
                                             <p style={{ margin: '10px 0 0 0' }}>Phone : 226-700-9229</p>
                                             <a

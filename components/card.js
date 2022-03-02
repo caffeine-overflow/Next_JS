@@ -60,19 +60,44 @@ function Card(props) {
                                         )
                                     }
                                 </div>
-                                <div style={{ opacity: '0.7', marginTop: '30px' }}>
+                                <div style={{ opacity: '0.7', margin: '30px 0', height: '300px' }}>
                                     {props.info.desc}
                                 </div>
-                                <div
+
+                                <section style={{ display: 'flex', width: '100%', flexDirection: 'row-reverse' }}>
+                                    {
+                                        props.info.link &&
+                                        <div style={{ margin: '0 5px', padding: '5px 15px', background: '#161748', borderRadius: '15px', color: '#f5f5f5' }}>
+                                            <a href={props.info.link} target='_blank'>Take me there</a>
+                                        </div>
+                                    },
+                                    {
+                                        props.info.git &&
+                                        <div style={{ margin: '0 5px', padding: '5px 15px', background: '#161748', borderRadius: '15px', color: '#f5f5f5' }}>
+                                            <a href={props.info.git} target='_blank'>Github</a>
+                                        </div>
+                                    }
+                                    {
+                                        props.info.exe &&
+                                        <div style={{ margin: '0 5px', padding: '5px 15px', background: '#161748', borderRadius: '15px', color: '#f5f5f5' }}>
+                                            <a href={props.info.exe} download target='_blank'>Download exe</a>
+                                        </div>
+                                    }
+                                </section>
+
+                                {/* <div
                                     style={{
                                         color: '#f5f5f5', margin: 'auto 0 0 auto', height: '50px',
-                                        width: '200px', background: '#161748', borderRadius: '15px',
+                                        width: '200px', 
                                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                                         fontSize: '18px'
                                     }}
                                 >
                                     Check it out
-                                </div>
+
+                                </div> */}
+
+                                {/* <a href='/hello.txt' download>Download</a> */}
                             </div>
 
                             <style jsx>{`
@@ -96,7 +121,7 @@ function Card(props) {
                     </motion.div>
                 }
             </div>
-        </VisibilitySensor>
+        </VisibilitySensor >
     )
 }
 
