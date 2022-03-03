@@ -7,9 +7,23 @@ import Head from "next/head";
 function index() {
     let projectArray = [
         {
+            name: 'Runtime App',
+            desc: 'Runtime is a agile project management tool for software development. Now you don\'t have to open multiple applications to handle your software development process. "Plan, Build or Discuss", we provide solution for all problems in simple, single platform. Crafted with essential features in a light, simple and modern design. Almost every features of an "Agile Project Management Software" is included in the app. Along with that the app also have ability to link with github to handle organization level operations. Most of the daily used git operations are handled by just a simple click. Chat feature is also included in the application so that the members don\'t have to go to different platforms to communicate. Any member can can message anyone within the organization.Along with messaging, video and group chat features are also supported by the application.',
+            stack: ['NodeJS', 'React', 'MongoDB', 'Python', 'SocketIO', 'HTML', 'CSS'],
+            images: [
+                { url: require('../images/projects/runtime1.png') },
+                { url: require('../images/projects/runtime2.png') },
+                { url: require('../images/projects/runtime3.png') },
+                { url: require('../images/projects/runtime4.png') },
+            ],
+            git: 'https://github.com/caffeine-overflow/Runtime',
+            exe: null,
+            link: 'https://runtimeapp.herokuapp.com/'
+        },
+        {
             name: 'E-Commerce Web App',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-            stack: ['React', 'HTML', 'CSS'],
+            desc: "",
+            stack: ['React', 'HTML', 'CSS', 'StripeAPI'],
             images: [
                 { url: require('../images/projects/ohlala.png') },
                 { url: require('../images/projects/ohlala2.png') },
@@ -22,22 +36,9 @@ function index() {
             link: 'https://ohlalaa.herokuapp.com/'
         },
         {
-            name: 'Android App',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-            stack: ['React', 'HTML', 'CSS'],
-            images: [
-                { url: require('../images/projects/android1.png') },
-                { url: require('../images/projects/android2.png') },
-                { url: require('../images/projects/android3.png') },
-            ],
-            git: 'https://github.com/caffeine-overflow/ECW-androif',
-            exe: null,
-            link: null
-        },
-        {
             name: 'Point of Sales - Desktop App',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-            stack: ['React', 'HTML', 'CSS'],
+            desc: "",
+            stack: ['Java', 'Mysql'],
             images: [
                 { url: require('../images/projects/pos1.png') },
                 { url: require('../images/projects/pos2.png') },
@@ -48,9 +49,33 @@ function index() {
             link: null
         },
         {
+            name: 'Android App',
+            desc: "",
+            stack: ['Java', 'SQLite'],
+            images: [
+                { url: require('../images/projects/android1.png') },
+                { url: require('../images/projects/android2.png') },
+                { url: require('../images/projects/android3.png') },
+            ],
+            git: 'https://github.com/caffeine-overflow/ECW-androif',
+            exe: null,
+            link: null
+        },
+        {
+            name: 'Portfolio',
+            desc: "",
+            stack: ['NextJS', 'React', 'HTML', 'CSS'],
+            images: [
+                { url: require('../images/projects/portfolio.png') }
+            ],
+            git: 'https://github.com/caffeine-overflow/Next_JS',
+            exe: null,
+            link: null
+        },
+        {
             name: 'Survival Game',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-            stack: ['React', 'HTML', 'CSS'],
+            desc: "",
+            stack: ['C#', 'Unity'],
             images: [
                 { url: require('../images/projects/survival1.png') },
                 { url: require('../images/projects/survival2.png') },
@@ -61,20 +86,9 @@ function index() {
             link: null
         },
         {
-            name: 'Portfolio',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-            stack: ['React', 'HTML', 'CSS'],
-            images: [
-                { url: require('../images/projects/portfolio.png') }
-            ],
-            git: 'https://github.com/caffeine-overflow/Next_JS',
-            exe: null,
-            link: null
-        },
-        {
             name: 'Bird Game',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-            stack: ['React', 'HTML', 'CSS'],
+            desc: "",
+            stack: ['C#', 'Unity'],
             images: [
                 { url: require('../images/projects/bird1.png') },
                 { url: require('../images/projects/bird2.png') }
@@ -85,8 +99,8 @@ function index() {
         },
         {
             name: 'Mini Golf Game',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-            stack: ['React', 'HTML', 'CSS'],
+            desc: "",
+            stack: ['C#', 'Unity'],
             images: [
                 { url: require('../images/projects/golf1.png') }
             ],
@@ -96,8 +110,8 @@ function index() {
         },
         {
             name: 'RStats',
-            desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
-            stack: ['React', 'HTML', 'CSS'],
+            desc: "",
+            stack: ['C'],
             images: [
                 { url: require('../images/projects/rstats1.png') },
                 { url: require('../images/projects/rstats2.png') },

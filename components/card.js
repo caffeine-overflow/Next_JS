@@ -5,6 +5,7 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 function Card(props) {
     const [fire, setFire] = useState(false);
+    const [imageModal, setimageModal] = useState(false);
 
     async function onChange(isVisible) {
         if (isVisible) {
@@ -14,6 +15,7 @@ function Card(props) {
 
     return (
         <VisibilitySensor onChange={onChange} partialVisibility={true} minTopValue={50}>
+
             <div style={{ minHeight: '500px', width: '100%' }}>
                 {
                     fire &&
@@ -29,12 +31,16 @@ function Card(props) {
                             <div style={{ width: '60%', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
                                 <div>
                                     <SimpleImageSlider
+                                        // style={{ cursor: 'zoom-in' }}
                                         width={600}
                                         height={500}
                                         bgColor="white"
                                         images={props.info.images}
                                         showBullets={true}
                                         showNavs={true}
+                                    // onClick={(i, e) => {
+                                    //     window.open(props.info.images[i].url, '_blank').focus();
+                                    // }}
                                     />
                                 </div>
                             </div>
@@ -60,7 +66,7 @@ function Card(props) {
                                         )
                                     }
                                 </div>
-                                <div style={{ opacity: '0.7', margin: '30px 0', height: '300px' }}>
+                                <div style={{ opacity: '0.7', margin: '30px 0', height: '300px', overflowY: 'auto' }}>
                                     {props.info.desc}
                                 </div>
 
@@ -121,7 +127,7 @@ function Card(props) {
                     </motion.div>
                 }
             </div>
-        </VisibilitySensor >
+        </VisibilitySensor>
     )
 }
 
