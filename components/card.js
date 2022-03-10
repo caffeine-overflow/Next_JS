@@ -66,7 +66,7 @@ function Card(props) {
                                         )
                                     }
                                 </div>
-                                <div style={{ opacity: '0.7', margin: '30px 0', height: '300px', overflowY: 'auto' }}>
+                                <div style={{ opacity: '0.7', margin: '30px 0', height: '300px', overflowY: 'auto', paddingRight: '15px' }}>
                                     {props.info.desc}
                                 </div>
 

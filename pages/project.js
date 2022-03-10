@@ -36,6 +36,17 @@ function index() {
             link: 'https://ohlalaa.herokuapp.com/'
         },
         {
+            name: 'Portfolio',
+            desc: "",
+            stack: ['NextJS', 'React', 'HTML', 'CSS'],
+            images: [
+                { url: require('../images/projects/portfolio.png') }
+            ],
+            git: 'https://github.com/caffeine-overflow/Next_JS',
+            exe: null,
+            link: null
+        },
+        {
             name: 'Point of Sales - Desktop App',
             desc: "",
             stack: ['Java', 'Mysql'],
@@ -58,17 +69,6 @@ function index() {
                 { url: require('../images/projects/android3.png') },
             ],
             git: 'https://github.com/caffeine-overflow/ECW-androif',
-            exe: null,
-            link: null
-        },
-        {
-            name: 'Portfolio',
-            desc: "",
-            stack: ['NextJS', 'React', 'HTML', 'CSS'],
-            images: [
-                { url: require('../images/projects/portfolio.png') }
-            ],
-            git: 'https://github.com/caffeine-overflow/Next_JS',
             exe: null,
             link: null
         },
