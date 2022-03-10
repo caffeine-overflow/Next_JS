@@ -397,7 +397,7 @@ function index() {
                                                 Email : danishdavis@hotmail.com
                                             </a>
                                             <br />
-                                            <h5>Download Resume</h5>
+                                            <h5><a href="/Danish_Davis_Resume.pdf" target='_blank'>Download Resume</a></h5>
                                         </div>
                                         <div>
                                             <svg style={{ width: '100%' }} viewBox="0 0 833.22212 633.11008">
