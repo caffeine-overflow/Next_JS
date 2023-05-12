@@ -71,12 +71,12 @@ function Card(props) {
                                 </div>
 
                                 <section style={{ display: 'flex', width: '100%', flexDirection: 'row-reverse' }}>
-                                    {
+                                    {/* {
                                         props.info.link &&
                                         <div style={{ margin: '0 5px', padding: '5px 15px', background: '#161748', borderRadius: '15px', color: '#f5f5f5' }}>
                                             <a href={props.info.link} target='_blank'>Take me there</a>
                                         </div>
-                                    },
+                                    }, */}
                                     {
                                         props.info.git &&
                                         <div style={{ margin: '0 5px', padding: '5px 15px', background: '#161748', borderRadius: '15px', color: '#f5f5f5' }}>
